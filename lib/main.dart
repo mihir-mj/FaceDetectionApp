@@ -4,6 +4,8 @@ import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 import 'dart:ui' as ui;
 
+import 'package:internship_task/bpm.dart';
+
 void main() => runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -44,6 +46,16 @@ class _MyAppState extends State<MyApp> {
                 _getImage();
               },
               child: Icon(Icons.image),
+            ),
+            SizedBox(height: 20),
+            FloatingActionButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomePage()),
+                );
+              },
+              child: Icon(Icons.favorite),
             ),
           ],
         ),
